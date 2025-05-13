@@ -4,6 +4,7 @@ build: # Retrieve the note from obsidian
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
 	tail -n +5  obsidian-html/output/md/index.md >> index.md
+	cat index.md
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 
