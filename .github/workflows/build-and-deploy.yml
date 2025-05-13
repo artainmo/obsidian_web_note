@@ -34,7 +34,6 @@ jobs:
       - name: Run make build
         run: |
           make build
-          cat obsidian-html/index.md
           rm -rf Obsidian
           rm -rf obsidian-html
 
