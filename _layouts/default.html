@@ -2,8 +2,8 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-    <title>Artainmo Judo @ La Chênaie</title>
-    <link rel="icon" href="ceinture.png" type="image/png">
+    <title>Arthur Tainmont Note</title>
+    <link rel="icon" href="favicon.png" type="image/png">
 
 {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,23 +15,17 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
+    
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      <a href="https://github.com/artainmo/obsidian_judo" class="btn">View on GitHub</a>
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
     </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/artainmo/obsidian_judo">obsidian_judo</a> is maintained by <a href="https://github.com/artainmo">artainmo</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/artainmo/obsidian_web_note">obsidian_web_note</a> is maintained by <a href="https://github.com/artainmo">artainmo</a>.</span>
       </footer>
     </main>
   </body>
