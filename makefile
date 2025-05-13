@@ -1,8 +1,6 @@
 build: # Retrieve the note from obsidian 
-	ls
-	cat note_title
-	note_title=$(cat note_title | tr -d '\r\n')
-	tail -n +2 "Obsidian/Obsidian/$note_title" >> obsidian-html/index.md # When appending omit the first line of tags
+	note_title=$$(cat note_title | tr -d '\r\n')
+	tail -n +2 "Obsidian/Obsidian/$$note_title" >> obsidian-html/index.md # When appending omit the first line of tags
 	cat obsidian-html/index.md
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
