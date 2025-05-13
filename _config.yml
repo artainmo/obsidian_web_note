@@ -1,6 +1,6 @@
-title: >- # The > - tells YAML to treat the value as a multi-line folded string to handle the HTML
-  Arthur Tainmont <a href="https://tainmontarthur.cv"><img src="images/cv.png" alt="CV" style="width: 16px; vertical-align: middle;"></a>
-description: Online display of a note | Affichage en ligne d’une note
+title: Online display of a note | Affichage en ligne d’une note
+description: >- # The > - tells YAML to treat the value as a multi-line folded string to handle the HTML
+  Arthur Tainmont <a href="https://tainmontarthur.cv"><img src="images/cv.png" alt="CV" style="width: 24px; vertical-align: middle;"></a>
 baseurl: /obsidian_web_note # Only if you're not using a custom domain
 url: https://artainmo.github.io
 remote_theme: pages-themes/cayman@v0.2.0
