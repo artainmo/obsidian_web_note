@@ -1,5 +1,5 @@
 ---
 layout: default
-title: Online display of a note
+title: Online display of a Note
 ---
 
