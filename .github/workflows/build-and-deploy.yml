@@ -1,0 +1,65 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  workflow_dispatch: # This allows manual execution of the workflow.
+  push:
+    branches:
+      - main  # Triggers on push to the 'main' branch.
+
+jobs:
+  build-and-deploy:
+    runs-on: macos-latest # Ubuntu created bugs while using 'sed' thus I stayed on macos.
+    steps:
+      # Step 1: Download the GitHub repository’s source code to the runner (the virtual machine where the action is being executed). Without this step, the subsequent steps wouldn't have access to the repository's code.
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # This will initialize and update submodules.
+          fetch-depth: 0 # Ensures that all commit history is fetched. Sometimes, a shallow clone can cause issues with submodules, so this ensures that full commit history is available for both the main repository and submodules.
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  # Use personal access token, to enable private repository access, created in 'developer settings' and referenced in 'secrets and variables' of this repository.
+
+      # Step 2: Set up Python 3.9 for obsidianhtml.
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # Step 3: Install obsidianhtml via pip for markdown conversion.
+      - name: Install obsidianhtml
+        run: |
+          python -m pip install --upgrade pip  # Ensure pip is up to date
+          pip install obsidianhtml
+
+      # Step 4: Run 'make build' to create the 'index.md'.
+      - name: Run make build
+        run: |
+          make build
+          cat obsidian-html/index.md
+          rm -rf Obsidian
+          rm -rf obsidian-html
+
+    # Set up Ruby environment
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      # Install dependencies using bundler
+      - name: Install Jekyll dependencies
+        run: |
+          gem install bundler
+          bundle init
+          echo "source 'https://rubygems.org'" >> Gemfile
+          echo "gem 'github-pages'" >> Gemfile
+          bundle install 
+
+      # Build the Jekyll site
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+
+      # Step 3: Deploy to GitHub Pages.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # The action used to deploy to the 'gh-pages' branch. You’ll need to configure GitHub Pages to use the 'gh-pages' branch in the repository settings. (Repository -> Settings -> Pages -> Source -> Select 'gh-pages')
+        with:
+          github_token: ${{ secrets.LAUNCH_GITHUB_PAGES_FROM_WORKFLOW }} # This token allows the workflow to interact with the GitHub API. The token was created in 'developer settings' and is defined in this repo settings -> secrets and variables -> actions.
+          publish_dir: ./_site
