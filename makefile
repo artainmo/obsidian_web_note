@@ -7,7 +7,7 @@ build: # Retrieve the note from obsidian
 	start=227; \
 	total=$$(wc -l < obsidian-html/output/html/index.html); \
 	end=$$((total - 177)); \
-	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html > index.html
+	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html >> index.html
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	cp "Obsidian/Obsidian/C9FF9A46-7004-4F71-B873-A8022906A5AD_1_105_c.jpeg" .
