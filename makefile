@@ -4,9 +4,9 @@ build: # Retrieve the note from obsidian
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
 	# Cut the added HTML by only keeping lines between start and end
-    	start=227 \
-    	total=$$(wc -l < obsidian-html/output/html/index.html) \
-    	end=$$((total - 177)) \
+    	start=227; \ # Setup as multiple commands on same line, else the variables won't be remembered for next commands
+    	total=$$(wc -l < obsidian-html/output/html/index.html); \
+    	end=$$((total - 177)); \
     	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html > index.html
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
