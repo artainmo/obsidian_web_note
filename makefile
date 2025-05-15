@@ -3,7 +3,7 @@ build: # Retrieve the note from obsidian
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
-	tail -n +227 obsidian-html/output/html/index.html | sed -e :a -e '$d;N;176,176ba' -e 'P;D' >> index.html # cut the upper and lower undesirable HTML
+	tail -n +227 obsidian-html/output/html/index.html | sed -e :a -e '$d;N;176ba' -e 'P;D' >> index.html # cut the upper and lower undesirable HTML
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	cp "Obsidian/Obsidian/C9FF9A46-7004-4F71-B873-A8022906A5AD_1_105_c.jpeg" .
