@@ -6,6 +6,7 @@ build: # Retrieve the note from obsidian
 	sed -n "227,326p" obsidian-html/output/html/index.html >> index.html # cut the upper and lower undesirable HTML
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
+	cp "Obsidian/Obsidian/C9FF9A46-7004-4F71-B873-A8022906A5AD_1_105_c.jpeg" .
 
 update: # update obsidian to have latest judo note
 	git submodule update --remote # Git knows what to update thanks to the .gitmodules file
