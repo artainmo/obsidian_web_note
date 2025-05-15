@@ -148,6 +148,234 @@
 </li>
 <li>Puis-je envisager une chirurgie, sachant qu’un traitement orthodontique la précède, en ayant des implants dentaires?   <ul>
 <li>Chirurgien Dr. Waskiewicz: Il vaut mieux faire le traitement orthodontique avant les implants.   </li>
+</ul>
+</li>
+<li>Quelles sont les risques de la chirurgie et leurs fréquence?   <ul>
+<li>Chirurgien Dr. Waskiewicz: Demander au chirurgien qui va opérer.   </li>
+</ul>
+</li>
+<li>Prix de la chirurgie et du traitement?   <ul>
+<li>Chirurgien Dr. Waskiewicz: La chirurgie est largement remboursée.   </li>
+<li>Quel est le prix du traitement orthodontique?   </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="gouttiere-occlusale">Gouttière occlusale</h5>
+<ul>
+<li>La gouttière occlusale peut être un test pour voir si la chirurgie aidera l'ATM?   </li>
+<li>Doit-on porter la gouttière occlusale en journée? Si oui, pendant combien de temps chaque jour, et cela doit-il se faire à long terme également?   <ul>
+<li>L'orthodontiste dit que oui elle doit être portée en journée.   </li>
+</ul>
+</li>
+<li>La gouttière occlusale peut prévenir les tensions musculaires dues à un manque de relaxation, conscient ou pas, comme le bruxism?   </li>
+<li>La gouttière occlusale permettra d'avancer la mandibule dans un position comfortable sans tensions?   </li>
+<li>La gouttière occlusale peut-elle aussi soulager la tension musculaire causée par la langue contractée vers le haut et l'arrière du à un manque d'espace?   </li>
+<li>Ouvrir la mâchoire provoque des craquements, sauf si j'avance la mandibule. Cela limite l'ouverture de ma bouche lors de l'élocution. Est-ce que la gouttière occlusale permettrait d’éliminer les craquements pour améliorer l'ouverture buccale pendant l'élocution?   </li>
+<li>La gouttière occlusale ne produit pas de résultats durables et doit être portée continuellement?   </li>
+<li>La gouttière occlusale améliorera l'esthétique?   </li>
+<li>Quel est le prix du traitement par gouttière occlusale sur le court et long terme?   </li>
+</ul>
+<h3 id="tableau-comparatif">Tableau comparatif</h3>
+<table>
+<thead>
+<tr>
+<th>Facteurs</th>
+<th>Chirurgie</th>
+<th>Gouttière occlusale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test</td>
+<td>123</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Test</td>
+<td>Hello</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conclusions">Conclusions</h3>
+<p>...</p></div>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
+
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A9532226460607258957127218557686105973{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D9532226460607258957127218557686105973{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B9532226460607258957127218557686105973{level}" level="{level}" note_temp_id="9532226460607258957127218557686105973" onclick="window.ObsHtmlGraph.run(this, '9532226460607258957127218557686105973', 'index');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C9532226460607258957127218557686105973{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
 
 
       <footer class="site-footer">
