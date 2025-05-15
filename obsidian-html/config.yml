@@ -2,3 +2,4 @@
 # should be in obsidian_folder_path_str
 # Use full path or relative path, but don't use ~/
 obsidian_entrypoint_path_str: 'index.md'
+include_graph_view: false
