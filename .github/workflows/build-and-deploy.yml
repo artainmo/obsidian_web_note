@@ -56,6 +56,9 @@ jobs:
       - name: Build Jekyll Site
         run: bundle exec jekyll build
 
+      - name: Add CNAME file for custom domain setup
+        run: echo "atnote.cv" > ./_site/CNAME
+
       # Step 3: Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # The action used to deploy to the 'gh-pages' branch. You’ll need to configure GitHub Pages to use the 'gh-pages' branch in the repository settings. (Repository -> Settings -> Pages -> Source -> Select 'gh-pages')
