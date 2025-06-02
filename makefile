@@ -10,11 +10,11 @@ build: # Retrieve the note from obsidian
 	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html >> index.html
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
-	# cp "Obsidian/Obsidian/C9FF9A46-7004-4F71-B873-A8022906A5AD_1_105_c.jpeg" . #TMJ
-	cp "Obsidian/Obsidian/open_project_school19_manuscript.pdf" .
-	cp "Obsidian/Obsidian/Screenshot 2025-05-05 at 16.31.24.png" .
-	cp "Obsidian/Obsidian/Screenshot 2025-05-16 at 10.35.16.png" .
-	cp "Obsidian/Obsidian/Certificate_NSL_Recognised.pdf" .
+	cp "Obsidian/Obsidian/C9FF9A46-7004-4F71-B873-A8022906A5AD_1_105_c.jpeg" . #TMJ note
+	#cp "Obsidian/Obsidian/open_project_school19_manuscript.pdf" .
+	#cp "Obsidian/Obsidian/Screenshot 2025-05-05 at 16.31.24.png" .
+	#cp "Obsidian/Obsidian/Screenshot 2025-05-16 at 10.35.16.png" .
+	#cp "Obsidian/Obsidian/Certificate_NSL_Recognised.pdf" .
 
 
 update: # update obsidian to have latest judo note
