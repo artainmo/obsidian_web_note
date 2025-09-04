@@ -3,7 +3,11 @@ build: # Retrieve the note from obsidian
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
-	tail -n +5  obsidian-html/output/md/index.md >> index.md # When appending omit the 'Index' line
+	# Cut the added HTML by only keeping lines between start and end
+	start=226; \
+	total=$$(wc -l < obsidian-html/output/html/index.html); \
+	end=$$((total - 177)); \
+	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html >> index.html
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
