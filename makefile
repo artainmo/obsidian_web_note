@@ -3,6 +3,7 @@ build: # Retrieve the note from obsidian
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
+	cat obsidian-html/output/html/index.html
 	# Cut the added HTML by only keeping lines between start and end
 	start=226; \
 	total=$$(wc -l < obsidian-html/output/html/index.html); \
