@@ -5,7 +5,7 @@ build: # Retrieve the note from obsidian
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
 	cat obsidian-html/output/html/index.html
 	# Cut the added HTML by only keeping lines between start and end
-	start=226; \
+	start=229; \
 	total=$$(wc -l < obsidian-html/output/html/index.html); \
 	end=$$((total - 177)); \
 	sed -n "$${start},$${end}p" obsidian-html/output/html/index.html >> index.html
