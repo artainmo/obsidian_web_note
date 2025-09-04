@@ -1,6 +1,6 @@
 title: Online display of a note
 description: >- # The > - tells YAML to treat the value as a multi-line folded string to handle the HTML
-  from Arthur Tainmont (<a href="https://tainmontarthur.cv"><img src="images/cv.png" alt="CV" style="width: 20px; vertical-align: middle;"></a>)
+  from Obsidian vault
 url: "http://atnote.net/"
 baseurl: ""  # Leave this blank if your site is served from the root
 remote_theme: pages-themes/cayman@v0.2.0
