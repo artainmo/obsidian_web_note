@@ -3,8 +3,8 @@ build: # Retrieve the note from obsidian
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
-	cat obsidian-html/output/html/index.html
 	# Cut the added HTML by only keeping lines between start and end
+	# cat obsidian-html/output/html/index.html # To view the 'index' title display problem
 	start=227; \
 	total=$$(wc -l < obsidian-html/output/html/index.html); \
 	end=$$((total - 177)); \
