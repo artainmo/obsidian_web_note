@@ -4,9 +4,10 @@ build: # Retrieve the note from obsidian
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
-	# Cut the added HTML by only keeping lines within the '<div class="content">'.
-	# cat obsidian-html/output/html/index.html # To view the 'index' title display problem
-	awk '/<div class="content">/{flag=1} flag; /<\/div>/{if(flag){flag=0; exit}}' obsidian-html/output/html/index.html >> index.html
+	# Cut the added HTML by only keeping lines within the '<div class="content">', but also remove the 'inline tags' and 'index title'
+	# cat obsidian-html/output/html/index.html # To view the display problem
+	awk '/<div class="content">/{flag=1} flag; /<\/div>/{if(flag){flag=0; exit}}' obsidian-html/output/html/index.html >> index.html \
+		| sed '/<a class="inline-tag"/d; /<h1 id="index"/d' > obsidian-html/index.html
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
