@@ -1,5 +1,5 @@
 build: # Retrieve the note from obsidian 
-	tail "obsidian/obsidian/$$(cat note_title)" > obsidian-html/index.md # When appending omit the first line of tags
+	cat "obsidian/obsidian/$$(cat note_title)" > obsidian-html/index.md
 	[ -s obsidian-html/index.md ] || echo "<br>No active file or active file not found." > obsidian-html/index.md # Write an error message for non-existing files
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
