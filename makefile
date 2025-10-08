@@ -1,5 +1,5 @@
 build: # Retrieve the note from obsidian 
-	cat "obsidian/obsidian/$$(cat note_title)" > obsidian-html/index.md 2>/dev/null
+	- cat "obsidian/obsidian/$$(cat note_title)" > obsidian-html/index.md # The leading '-' is the Makefile-approved way to ignore errors. This allows the makefile to continue executing even when 'note_title' doesn't contain an appropriate file name.
 	[ -s obsidian-html/index.md ] || echo "<br>No active file or active file not found." > obsidian-html/index.md # Write an error message for non-existing files
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
