@@ -50,6 +50,7 @@ jobs:
           bundle init
           echo "source 'https://rubygems.org'" >> Gemfile
           echo "gem 'github-pages'" >> Gemfile
+          echo 'gem "jekyll-theme-cayman"' >> Gemfile
           bundle install 
 
       # Build the Jekyll site
