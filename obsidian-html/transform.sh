@@ -7,4 +7,4 @@ sed -i '' 's/!\[\[LOI SNICA Edouard.pdf\]\]/<embed src="LOI SNICA Edouard.pdf" t
 sed -i '' 's/!\[\[LOI SNICA Asma.pdf\]\]/<div class="pdf-container"><embed src="LOI SNICA Asma.pdf" type="application\/pdf"><\/div>/g' index.md
 sed -i '' 's/!\[\[LOI SNICA Maximilien.pdf\]\]/<div class="pdf-container"><embed src="LOI SNICA Maximilien.pdf" type="application\/pdf"><\/div>/g' index.md
 sed -i '' 's/!\[\[LOI SNICA Elias.pdf\]\]/<div class="pdf-container"><embed src="LOI SNICA Elias.pdf" type="application\/pdf"><\/div>/g' index.md
-sed -i '' 's/!\[\[LOI SNICA Momo.pdf\]\]/<div class="pdf-container"><embed src="LOI SNICA Momo.pdf" type="application\/pdf"><\/div>/g' index.md
+sed -i '' 's/!\[\[LOI SNICA Momo.pdf\]\]/<embed src="LOI SNICA Momo.pdf" type="application\/pdf">/g' index.md
