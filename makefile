@@ -11,11 +11,11 @@ build: # Retrieve the note from obsidian
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
-	cp "Obsidian/Obsidian/LOI SNICA Momo.pdf"
-	cp "Obsidian/Obsidian/LOI SNICA Elias.pdf"
-	cp "Obsidian/Obsidian/LOI SNICA Maximilien.pdf"
-	cp "Obsidian/Obsidian/LOI SNICA Asma.pdf"
-	cp "Obsidian/Obsidian/LOI SNICA Edouard.pdf"
+	cp "Obsidian/Obsidian/LOI SNICA Momo.pdf" .
+	cp "Obsidian/Obsidian/LOI SNICA Elias.pdf" .
+	cp "Obsidian/Obsidian/LOI SNICA Maximilien.pdf" .
+	cp "Obsidian/Obsidian/LOI SNICA Asma.pdf" .
+	cp "Obsidian/Obsidian/LOI SNICA Edouard.pdf" .
 
 update: # update obsidian to have latest judo note
 	git submodule update --remote # Git knows what to update thanks to the .gitmodules file
