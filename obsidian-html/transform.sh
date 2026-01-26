@@ -12,5 +12,5 @@ sed -i '' 's/!\[\[LOI SNICA Elias.pdf\]\]/<embed src="LOI SNICA Elias.pdf" type=
 sed -i '' 's/!\[\[LOI SNICA Momo.pdf\]\]/<embed src="LOI SNICA Momo.pdf" type="application\/pdf">/g' index.md
 
 #Internship II
-sed -i '' 's/!\[\[Coursera 4V4FNOHS1GBM.pdf\]\]/<div class="pdf-container"><embed src="Coursera 4V4FNOHS1GBM.pdf" type="application\/pdf">/g' index.md
-sed -i '' 's/!\[\[Courrier fin stage Arthur Tainmont.pdf\]\]/<div class="pdf-container"><embed src="Courrier fin stage Arthur Tainmont.pdf" type="application\/pdf">/g' index.md
+sed -i '' 's/!\[\[Coursera 4V4FNOHS1GBM.pdf\]\]/<embed src="Coursera 4V4FNOHS1GBM.pdf" type="application\/pdf">/g' index.md
+sed -i '' 's/!\[\[Courrier fin stage Arthur Tainmont.pdf\]\]/<embed src="Courrier fin stage Arthur Tainmont.pdf" type="application\/pdf">/g' index.md
