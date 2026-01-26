@@ -11,9 +11,9 @@ build: # Retrieve the note from obsidian
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
-	cp "Obsidian/Obsidian/Coursera 4V4FNOHS1GBM.pdf"
-	cp "Obsidian/Obsidian/Screenshot 2026-01-26 at 13.46.39.png"
-	cp "Obsidian/Obsidian/Courrier fin stage Arthur Tainmont.pdf"
+	cp "Obsidian/Obsidian/Coursera 4V4FNOHS1GBM.pdf" .
+	cp "Obsidian/Obsidian/Screenshot 2026-01-26 at 13.46.39.png" .
+	cp "Obsidian/Obsidian/Courrier fin stage Arthur Tainmont.pdf" .
 	
 
 	# For SNICA
