@@ -68,7 +68,43 @@
 <p><a href="avocadhoc.be" class="external-link">Avocadhoc</a> est la plateforme digitale de Solis qui propose des formations et modèles de documents juridiques, mais aussi de l'actualité juridique en droit des affaires, pour les entreprises ou comptables.   </p>
 <h3 id="connaissances-prealables-et-identifier-les-besoins">Connaissances préalables et identifier les besoins</h3>
 <p>Avant le stage j'ai suivi un cours de spécialisation en NLP. J'ai finalisé ce cours durant le début du stage et il m'a permis de comprendre comment appliquer le NLP.   </p>
-<div class="pdf-container"><embed src="Coursera 4V4FNOHS1GBM.pdf" type="application/pdf"></div>
+<div class="pdf-container"><embed src="Coursera 4V4FNOHS1GBM.pdf" type="application/pdf">   
+
+En discutant avec l'équipe d'avocats j'ai pu comprendre le fonctionnement et les contraintes du travail d'avocats pour appréhender leurs besoins par rapport à ce que le NLP sait proposer.   
+
+![](Screenshot%202026-01-26%20at%2013.46.39.png)   
+
+### La meilleure solution NLP   
+
+La solution NLP semblant la plus adaptée était le RAG.    
+
+RAG est une abréviation de _retrieval-augmented generation_. Un RAG répond à des questions en langage naturel, référence ses réponses qu'elle cherche parmi des textes qui lui sont donnés. Donc elle _retrieve_ des informations dans des textes donnés, et après _generate_ une réponse en langage naturel.   
+
+Le RAG est privilégié par les professionnels vis-à-vis les LLMs classiques, car elle trouve ses réponses dans des textes spécifiquement choisis par l'utilisateur tout en référençant ses réponses, créant des réponses plus justes et vérifiables.   
+
+### Comment créer le RAG   
+
+ Un RAG combine un _retriever_ (trouve les morceaux de texte les plus pertinents de la database en utilisant _embeddings_ et _vector search_) avec un _generator_ (un LLM, comme GPT-4, Llama 3, ou Mistral, qui prend ces morceaux comme contexte et synthétise une réponse).   
+
+![What is RAG: Understanding Retrieval-Augmented Generation - Qdrant](https://qdrant.tech/articles_data/what-is-rag-in-ai/how-rag-works.jpg)   
+
+_Embedding_ signifie transformer du texte en vecteurs numériques qui encodent la signification. Pour faire cela localement on utilise la librairie Python _SentenceTransformer_. Puis _Redis_ est utilisé: pour stocker ces vecteurs dans une _vector database_; et _retrieve_ avec un _vector search_ utilisant _cosine similarity_ et _kNN_. Pour la partie _generation_ du RAG on utilise le LLM _Llama 3 8B_ qui est _open-source_ sur _Hugging Face_, et qu'on run localement via _Ollama_.   
+
+### Comment créer la database   
+
+Le RAG doit: se baser sur des informations qui lui sont données; et référencer des sources sûres. Pour cela une database a été créée contenant: législations, jurisprudences, doctrines, circulaires, anciennes consultations et cours académiques. On récupère cela via: la base de données _Strada lex_; le journal _Fiscologue_; les documents en interne; et les cours de professeurs à Solis.   
+
+![Oracle Database Appliance (ODA) - Das Protection Juridique Case Study](https://dbvisit.com/hs-fs/hubfs/AdobeStock_538096224.jpeg?width=2000&name=AdobeStock_538096224.jpeg)   
+
+### Résultats finales   
+
+L'équipe préfère maintenant le système RAG au lieu du LLM classique chatGPT précédemment utilisé, en raison de ses réponses plus justes et référencées.   
+
+Le maître de stage note à mon sujet: bon fonctionnement autonome comme appris à 42Belgium; bonne organisation en utilisant des applications de notes; bonne communication avec l'équipe et compréhension des besoins.   
+
+<div class="pdf-container"><embed src="Courrier fin stage Arthur Tainmont.pdf" type="application/pdf">   
+
+Cependant, actuellement, 6 mois après la fin du stage, l'équipe utilise le nouveau _GenIA-L_, qui est aussi un RAG mais avec sa propre database que l'utilisateur ne doit pas gérer lui-même, ce qui est donc plus simple d'utilisation.</div>
 
 
       <footer class="site-footer">
