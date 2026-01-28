@@ -11,18 +11,18 @@ build: # Retrieve the note from obsidian
 	# Also add local images if necessary
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
+	# For Internship II
+	cp "Obsidian/Obsidian/Coursera 4V4FNOHS1GBM.pdf" .
+	cp "Obsidian/Obsidian/Screenshot 2026-01-26 at 13.46.39.png" .
+	cp "Obsidian/Obsidian/Courrier fin stage Arthur Tainmont.pdf" .
+
 	# For SNICA
-	cp "Obsidian/Obsidian/LOI SNICA Momo.pdf" .
-	cp "Obsidian/Obsidian/LOI SNICA Elias.pdf" .
-	cp "Obsidian/Obsidian/LOI SNICA Maximilien.pdf" .
-	cp "Obsidian/Obsidian/LOI SNICA Asma.pdf" .
-	cp "Obsidian/Obsidian/LOI SNICA Edouard.pdf" .
+	#cp "Obsidian/Obsidian/LOI SNICA Momo.pdf" .
+	#cp "Obsidian/Obsidian/LOI SNICA Elias.pdf" .
+	#cp "Obsidian/Obsidian/LOI SNICA Maximilien.pdf" .
+	#cp "Obsidian/Obsidian/LOI SNICA Asma.pdf" .
+	#cp "Obsidian/Obsidian/LOI SNICA Edouard.pdf" .
 
-
-	# Internship II
-	#cp "Obsidian/Obsidian/Coursera 4V4FNOHS1GBM.pdf" .
-	#cp "Obsidian/Obsidian/Screenshot 2026-01-26 at 13.46.39.png" .
-	#cp "Obsidian/Obsidian/Courrier fin stage Arthur Tainmont.pdf" .
 
 update: # update obsidian to have latest judo note
 	git submodule update --remote # Git knows what to update thanks to the .gitmodules file
