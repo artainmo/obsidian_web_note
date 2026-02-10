@@ -51,42 +51,7 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <h1 id="internship-ii-project-school42-peer-evaluations">Internship II project - school42 peer evaluations</h1>
-<h3 id="table-of-contents">Table of contents</h3>
-<ul>
-<li><a href="#lieu-de-stage-solis-law" class="anchor-link">Lieu de stage Solis Law</a>   </li>
-<li><a href="#connaissances-prealables-et-identifier-les-besoins" class="anchor-link">Connaissances préalables et identifier les besoins</a>   </li>
-<li><a href="#la-meilleure-solution-nlp" class="anchor-link">La meilleure solution NLP</a>   </li>
-<li><a href="#comment-creer-le-rag" class="anchor-link">Comment créer le RAG</a>   </li>
-<li><a href="#comment-creer-la-database" class="anchor-link">Comment créer la database</a>   </li>
-<li><a href="#resultat-final" class="anchor-link">Résultat final</a>   </li>
-</ul>
-<h3 id="lieu-de-stage-solis-law">Lieu de stage: Solis Law</h3>
-<p><img alt="Solis Law Firm | Isnes" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsJ2U1yp510VrwfbUQeYwEBwG7E60_srSE5Q&amp;s" />   </p>
-<p><a href="https://www.solislaw.eu/" class="external-link">Solis law</a> est un cabinet d'avocats en droit des affaires, contenant une équipe pluridisciplinaire couvrant les domaines d'expertises: compliance (la conformité légale des entreprises); sociétés; droit fiscal (impôts et taxes); droit commercial; contrats et immobilier; TVA, droit de douane et d'accise; entreprise en difficulté; planification patrimoniale; modes alternatifs de règlement des conflits (les MARCS).   </p>
-<p>La clientèle est essentiellement composée d'entreprises de toutes tailles qui demandent conseil sur le plan juridique et économique de leur entreprise.   </p>
-<p><a href="avocadhoc.be" class="external-link">Avocadhoc</a> est la plateforme digitale de Solis qui propose des formations et modèles de documents juridiques, mais aussi de l'actualité juridique en droit des affaires, pour les entreprises ou comptables.   </p>
-<h3 id="connaissances-prealables-et-identifier-les-besoins">Connaissances préalables et identifier les besoins</h3>
-<p>Avant le stage j'ai suivi un cours de spécialisation en NLP. J'ai finalisé ce cours durant le début du stage et il m'a permis de comprendre comment appliquer le NLP.   </p>
-<p><embed src="Coursera 4V4FNOHS1GBM.pdf" type="application/pdf">   </p>
-<p>En discutant avec l'équipe d'avocats j'ai pu comprendre le fonctionnement et les contraintes du travail d'avocats pour appréhender leurs besoins par rapport à ce que le NLP sait proposer.   </p>
-<p><img alt="" src="Screenshot%202026-01-26%20at%2013.46.39.png" />   </p>
-<h3 id="la-meilleure-solution-nlp">La meilleure solution NLP</h3>
-<p>La solution NLP semblant la plus adaptée était le RAG.    </p>
-<p>RAG est une abréviation de <em>retrieval-augmented generation</em>. Un RAG répond à des questions en langage naturel, référence ses réponses qu'elle cherche parmi des textes qui lui sont donnés. Donc elle <em>retrieve</em> des informations dans des textes donnés, et après <em>generate</em> une réponse en langage naturel.   </p>
-<p>Le RAG est privilégié par les professionnels vis-à-vis les LLMs classiques, car elle trouve ses réponses dans des textes spécifiquement choisis par l'utilisateur tout en référençant ses réponses, créant des réponses plus justes et vérifiables.   </p>
-<h3 id="comment-creer-le-rag">Comment créer le RAG</h3>
-<p>Un RAG combine un <em>retriever</em> (trouve les morceaux de texte les plus pertinents de la database en utilisant <em>embeddings</em> et <em>vector search</em>) avec un <em>generator</em> (un LLM, comme GPT-4, Llama 3, ou Mistral, qui prend ces morceaux comme contexte et synthétise une réponse).   </p>
-<p><img alt="What is RAG: Understanding Retrieval-Augmented Generation - Qdrant" src="https://qdrant.tech/articles_data/what-is-rag-in-ai/how-rag-works.jpg" />   </p>
-<p><em>Embedding</em> signifie transformer du texte en vecteurs numériques qui encodent la signification. Pour faire cela localement on utilise la librairie Python <em>SentenceTransformer</em>. Puis <em>Redis</em> est utilisé: pour stocker ces vecteurs dans une <em>vector database</em>; et <em>retrieve</em> avec un <em>vector search</em> utilisant <em>cosine similarity</em> et <em>kNN</em>. Pour la partie <em>generation</em> du RAG on utilise le LLM <em>Llama 3 8B</em> qui est <em>open-source</em> sur <em>Hugging Face</em>, et qu'on run localement via <em>Ollama</em>.   </p>
-<h3 id="comment-creer-la-database">Comment créer la database</h3>
-<p>Le RAG doit: se baser sur des informations qui lui sont données; et référencer des sources sûres. Pour cela une database a été créée contenant: législations, jurisprudences, doctrines, circulaires, anciennes consultations et cours académiques. On récupère cela via: la base de données <em>Strada lex</em>; le journal <em>Fiscologue</em>; les documents en interne; et les cours de professeurs à Solis.   </p>
-<p><img alt="Oracle Database Appliance (ODA) - Das Protection Juridique Case Study" src="https://dbvisit.com/hs-fs/hubfs/AdobeStock_538096224.jpeg?width=2000&amp;name=AdobeStock_538096224.jpeg" />   </p>
-<h3 id="resultat-final">Résultat final</h3>
-<p>L'équipe préfère maintenant le système RAG au lieu du LLM classique chatGPT précédemment utilisé, en raison de ses réponses plus justes et référencées.   </p>
-<p>Le maître de stage note à mon sujet: bon fonctionnement autonome comme appris à 42Belgium; bonne organisation en utilisant des applications de notes; bonne communication avec l'équipe et compréhension des besoins.   </p>
-<p><embed src="Courrier fin stage Arthur Tainmont.pdf" type="application/pdf">   </p>
-<p>Cependant, actuellement, 6 mois après la fin du stage, l'équipe utilise le nouveau <em>GenIA-L</em>, qui est aussi un RAG mais avec sa propre database que l'utilisateur ne doit pas gérer lui-même, ce qui est donc plus simple d'utilisation.</p></div>
+      <p><br>No active file or active file not found.   </p></div>
 
 
       <footer class="site-footer">
