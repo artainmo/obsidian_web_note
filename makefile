@@ -12,6 +12,7 @@ build: # Retrieve the note from obsidian
 	# Example: cp "Obsidian/Obsidian/Screenshot 2024-03-21 at 16.44.14.png" .
 	# If wanting to display pdfs, make changes in 'obsidian-html/transform.sh'.
 	cp "Obsidian/Obsidian/1000142485.jpg" .
+	cp "Obsidian/Obsidian/Analyse posturale Cabinet Posturosport - Tainmont Artur.pdf" .
 
 	# For Internship II
 	#cp "Obsidian/Obsidian/Coursera 4V4FNOHS1GBM.pdf" .
