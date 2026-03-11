@@ -16,4 +16,4 @@ sed -i '' 's/!\[\[Coursera 4V4FNOHS1GBM.pdf\]\]/<embed src="Coursera 4V4FNOHS1GB
 sed -i '' 's/!\[\[Courrier fin stage Arthur Tainmont.pdf\]\]/<embed src="Courrier fin stage Arthur Tainmont.pdf" type="application\/pdf">/g' index.md
 
 #Other
-sed -i '' 's/!\[\[MedirisMulti-2596701.pdf\]\]/<embed src="MedirisMulti-2596701.pdf" type="application\/pdf">/g' index.md
+sed -i '' 's/!\[\[Analyse posturale Cabinet Posturosport - Tainmont Artur.pdf\]\]/<embed src="Analyse posturale Cabinet Posturosport - Tainmont Artur.pdf" type="application\/pdf">/g' index.md
