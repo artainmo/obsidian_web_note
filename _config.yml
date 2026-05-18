@@ -1,6 +1,6 @@
 title: Online display of a note
 description: >- # The > - tells YAML to treat the value as a multi-line folded string to handle the HTML
   from Obsidian vault
-url: "http://atnote.net/"
+url: "http://tainmontarthur.online/"
 baseurl: ""  # Leave this blank if your site is served from the root
 theme: jekyll-theme-cayman
