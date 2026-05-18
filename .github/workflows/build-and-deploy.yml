@@ -58,7 +58,7 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Add CNAME file for custom domain setup
-        run: echo "atnote.net" > ./_site/CNAME
+        run: echo "tainmontarthur.online" > ./_site/CNAME
 
       # Step 3: Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
