@@ -19,10 +19,10 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  # Use personal access token, to enable private repository access, created in 'developer settings' and referenced in 'secrets and variables' of this repository.
 
       # Step 2: Set up Python 3.9 for obsidianhtml.
-      - name: Set up Python 3.9
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.11'
 
       # Step 3: Install obsidianhtml via pip for markdown conversion.
       - name: Install obsidianhtml
